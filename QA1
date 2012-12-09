@@ -1,0 +1,28 @@
+
+#include<iostream>
+
+using namespace std;
+
+class chess{
+  public:
+		int bord[8][8];
+		chess(){
+		    for (int i = 0; i<8; i++)
+                for (int j =0; j<8; j++)
+                    bord[i][j] = (i % 2 == 0 ? (j % 2 == 0 ? 1 : 0) : (j % 2 == 0 ? 0: 1));
+		}
+		void print (){
+			for (int i = 0; i<8; i++){
+				for(int j = 0; j<8; j++)
+					cout << bord[i][j] << " ";
+				cout << endl;
+			}
+		}
+};
+
+int main(){
+	chess a;
+	a.print();
+	return 0;
+}
+
